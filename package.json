@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "基于 electron 的简易绘画工具",
   "main": "public/electron.js",
+  "homepage": ".",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron": "node_modules/.bin/electron . --env=development",
+    "dev-svr": "node_modules/.bin/webpack-dev-server --progress --color --config=./build/webpack.config.dev.js",
+    "dev": "node_modules/.bin/concurrently \"npm run dev-svr\" \"npm run electron \""
   },
   "repository": {
     "type": "git",
@@ -18,11 +22,13 @@
   "bugs": {
     "url": "https://github.com/SaxonGao-SZ/electron-nobe-painter/issues"
   },
-  "homepage": "https://github.com/SaxonGao-SZ/electron-nobe-painter#readme",
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "electron": "^9.0.5",
-    "js-loader": "^0.1.1",
+    "html-webpack-plugin": "^4.3.0",
+    "ts-loader": "^7.0.5",
     "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
