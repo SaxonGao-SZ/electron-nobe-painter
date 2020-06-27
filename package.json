@@ -20,10 +20,15 @@
   },
   "homepage": "https://github.com/SaxonGao-SZ/electron-nobe-painter#readme",
   "devDependencies": {
+    "electron": "^9.0.5",
+    "js-loader": "^0.1.1",
     "webpack": "^4.43.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@types/electron": "^1.6.10",
+    "ionicons": "^5.1.2",
     "typescript": "^3.9.5"
-  }
+  },
+  "keywords": []
 }
